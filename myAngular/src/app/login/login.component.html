@@ -1,0 +1,13 @@
+<br>
+<h2>login in</h2>
+<form [formGroup]="loginGroup" (ngSubmit)="onSubmit()">
+  <label>
+    <input type="text" formControlName="inputName" placeholder="name" />
+  </label>
+  <button   id="loginButton" type="submit"  >
+    login
+  </button>
+</form>
+
+
+  <!-- routerLink="/people"  -->

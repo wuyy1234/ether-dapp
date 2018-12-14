@@ -1,0 +1,29 @@
+<br>
+<br>
+<div *ngIf="people">
+    <div>
+        <label>edit name:
+          <input [(ngModel)]="people.name"  placeholder="name">
+        </label>
+    </div>
+    <h2>{{people.name| uppercase}} Details</h2>
+    <table >
+        <tr><td class="property">name: </td><td>{{people.name}}</td></tr>
+        <tr><td class="property">birth_year:</td><td>{{people.birth_year}}</td></tr>
+        <tr><td class="property">eye_color: </td><td>{{people.eye_color}}</td></tr>
+        <tr><td class="property">films: </td><td>{{people.films}}</td></tr>
+        <tr><td class="property">gender: </td><td>{{people.gender}}</td></tr>
+        <tr><td class="property">hair_color: </td><td>{{people.hair_color}}</td></tr>
+        <tr><td class="property">height: </td><td>{{people.height}}</td></tr>
+        <tr><td class="property">homeworld: </td><td>{{people.homeworld}}</td></tr>
+        <tr><td class="property">mass: </td><td>{{people.mass}}</td></tr>
+        <tr><td class="property">skin_color: </td><td>{{people.skin_color}}</td></tr>
+        <tr><td class="property">created:</td><td>{{people.created}}</td></tr>
+        <tr><td class="property">edited: </td><td>{{people.edited}}</td></tr>
+        <tr><td class="property">species:</td><td>{{people.species}}</td></tr>
+        <tr><td class="property">starships:</td><td>{{people.starships}}</td></tr>
+        <tr><td class="property">url: </td><td>{{people.url}}</td></tr>
+        <tr><td class="property">vehicles: </td><td>{{people.vehicles}}</td></tr>
+    </table>
+   
+  </div>

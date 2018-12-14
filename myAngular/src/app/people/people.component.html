@@ -1,0 +1,12 @@
+<h2>PEOPLE PAGE</h2>
+<ul class="peoples">
+    <li *ngFor="let people of peoples">
+      <a routerLink="/detail/{{people.name}}">
+    <span class="badge" >{{people.gender}}</span> {{people.name}}
+    </a>
+  </li>
+</ul>
+
+
+
+
