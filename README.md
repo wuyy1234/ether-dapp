@@ -234,10 +234,12 @@ ng serve --open
     - https://stackoverflow.com/questions/38983766/angular-2-and-observables-cant-bind-to-ngmodel-since-it-isnt-a-known-prope
     
 ## Docker配置nodejs应用
-    - 参考教程：https://www.cnblogs.com/pass245939319/p/8473861.html
-    - 总流程：
-        - 准备好nodejs程序(如angular)
-        - 写好dockerignore和Dockerfile
-        - 生成镜像
-        - 上传至docker hub
-    - 生成的镜像仓库：https://cloud.docker.com/repository/docker/wuyy1234/wyy_angular_demo
+
+- 参考教程：https://www.cnblogs.com/pass245939319/p/8473861.html
+- 总流程：
+    - 准备好nodejs程序(如angular)
+    - 写好dockerignore和Dockerfile
+    - 生成镜像
+    - 上传至docker hub  
+    
+- 生成的镜像仓库：https://cloud.docker.com/repository/docker/wuyy1234/wyy_angular_demo
