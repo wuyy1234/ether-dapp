@@ -222,4 +222,13 @@ ng serve --open
     };
     }
     ```
+## 调试细节
+ 
+ - no-provider-for-activatedroute:
+    - https://stackoverflow.com/questions/38942817/no-provider-for-activatedroute-angular-2-rc5 
 
+- angular-2-router-no-base-href-set:
+    - https://stackoverflow.com/questions/34535163/angular-2-router-no-base-href-set
+
+- angular-2-and-observables-cant-bind-to-ngmodel-since-it-isnt-a-known-prope:
+    - https://stackoverflow.com/questions/38983766/angular-2-and-observables-cant-bind-to-ngmodel-since-it-isnt-a-known-prope

@@ -85,7 +85,12 @@ export class PeopleService {
   }
 
   getPeople(name:string):Observable<People>{
-    var url=this.peoples.find(people=>people.name===name).url;
+    var url;
+    for(let  p of this.peoples){
+      if(p.name===name){
+        url=p.url;
+      }
+    }
     /*暂不添加this.httpOptions*/
     return this.http.get<People>(url).pipe(
       tap(_=>this.log("get detail of "+name)),

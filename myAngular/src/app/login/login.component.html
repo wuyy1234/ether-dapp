@@ -1,8 +1,8 @@
 <br>
 <h2>login in</h2>
-<form [formGroup]="loginGroup" (ngSubmit)="onSubmit()">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
   <label>
-    <input type="text" formControlName="inputName" placeholder="name" />
+    <input type="text" formControlName="inputName" />
   </label>
   <button   id="loginButton" type="submit"  >
     login

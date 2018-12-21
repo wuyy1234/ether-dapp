@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl ,FormGroup, FormControlName} from '@angular/forms';
+import { FormControl ,FormGroup,FormBuilder} from '@angular/forms';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import {PeopleService} from '../people.service';
 import {LoginPost} from './LoginPost'
@@ -16,24 +16,25 @@ export class LoginComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private peopleService:PeopleService,
+    private fb: FormBuilder
   ) { }
   
-  loginGroup=new FormGroup({//angular特有的表单提交方式
-    inputName:new FormControl(''),
-  })
+  loginForm=this.fb.group({
+    inputName:[''],
+  })  
 
 
   
   
   onSubmit(){
     let urlTemp="https://swapi.co/api/login/";
-    console.log("submit:"+this.loginGroup.value.inputName)
+    console.log("submit:"+this.loginForm.value.inputName)
     let httpopt=this.peopleService.httpOptions
 
-    let loginPost={name:this.loginGroup.value.inputName}
+    let loginPost={name:this.loginForm.value.inputName}
 
     ///////test
-    this.peopleService.auth=this.loginGroup.value.inputName
+    this.peopleService.auth=this.loginForm.value.inputName
     console.log("this.peopleService.auth set :"+this.peopleService.auth)
 
     /*以json方式提交name*/
