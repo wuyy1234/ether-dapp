@@ -1,4 +1,4 @@
-# 服务器前端搭建
+# 服务器前端搭建+Docker配置镜像
 ------
 
 ## 负责成员：16340244伍宇阳
@@ -232,3 +232,11 @@ ng serve --open
 
 - angular-2-and-observables-cant-bind-to-ngmodel-since-it-isnt-a-known-prope:
     - https://stackoverflow.com/questions/38983766/angular-2-and-observables-cant-bind-to-ngmodel-since-it-isnt-a-known-prope
+    
+## Docker配置nodejs应用
+    - 参考教程：https://www.cnblogs.com/pass245939319/p/8473861.html
+    - 总流程：
+        - 准备好nodejs程序(如angular)
+        - 写好dockerignore和Dockerfile
+        - 生成镜像
+        - 上传至docker hub
