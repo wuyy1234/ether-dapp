@@ -240,3 +240,4 @@ ng serve --open
         - 写好dockerignore和Dockerfile
         - 生成镜像
         - 上传至docker hub
+    - 生成的镜像仓库：https://cloud.docker.com/repository/docker/wuyy1234/wyy_angular_demo
