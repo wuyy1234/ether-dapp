@@ -1,4 +1,4 @@
-# 服务器前端搭建+Docker配置镜像
+# 服务器前端搭建+nodejs应用容器化Docker配置镜像
 ------
 
 ## 负责成员：16340244伍宇阳
@@ -241,5 +241,21 @@ ng serve --open
     - 写好dockerignore和Dockerfile
     - 生成镜像
     - 上传至docker hub  
-    
+- Dockerfile
+```
+#制定node镜像的版本
+FROM registry.docker-cn.com/library/node:8.9-alpine
+#声明作者
+MAINTAINER AlanWu
+#移动当前目录下面的文件到app目录下
+ADD . /app/
+#进入到app目录下面，类似cd
+WORKDIR /app
+#安装依赖
+RUN npm install
+#对外暴露的端口
+EXPOSE 4200
+#程序启动脚本
+CMD ["npm", "start"]
+```
 - 生成的镜像仓库：https://cloud.docker.com/repository/docker/wuyy1234/wyy_angular_demo
