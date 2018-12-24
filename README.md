@@ -1,4 +1,4 @@
-# 服务器前端搭建+nodejs应用容器化Docker配置镜像
+# 服务器前端搭建+nodejs应用容器化Docker部署
 ------
 
 ## 负责成员：16340244伍宇阳
@@ -234,28 +234,32 @@ ng serve --open
     - https://stackoverflow.com/questions/38983766/angular-2-and-observables-cant-bind-to-ngmodel-since-it-isnt-a-known-prope
     
 ## Docker配置nodejs应用
+- 生成镜像
+    - 参考教程：https://www.cnblogs.com/pass245939319/p/8473861.html
+    - 总流程：
+        - 准备好nodejs程序(如angular)
+        - 写好dockerignore和Dockerfile
+        - 生成镜像
+        - 上传至docker hub  
+    - Dockerfile
+    ```
+    #制定node镜像的版本
+    FROM registry.docker-cn.com/library/node:8.9-alpine
+    #声明作者
+    MAINTAINER AlanWu
+    #移动当前目录下面的文件到app目录下
+    ADD . /app/
+    #进入到app目录下面，类似cd
+    WORKDIR /app
+    #安装依赖
+    RUN npm install
+    #对外暴露的端口
+    EXPOSE 4200
+    #程序启动脚本
+    CMD ["npm", "start"]
+    ```
+    - 生成的镜像仓库：https://cloud.docker.com/repository/docker/wuyy1234/wyy_angular_demo
 
-- 参考教程：https://www.cnblogs.com/pass245939319/p/8473861.html
-- 总流程：
-    - 准备好nodejs程序(如angular)
-    - 写好dockerignore和Dockerfile
-    - 生成镜像
-    - 上传至docker hub  
-- Dockerfile
-```
-#制定node镜像的版本
-FROM registry.docker-cn.com/library/node:8.9-alpine
-#声明作者
-MAINTAINER AlanWu
-#移动当前目录下面的文件到app目录下
-ADD . /app/
-#进入到app目录下面，类似cd
-WORKDIR /app
-#安装依赖
-RUN npm install
-#对外暴露的端口
-EXPOSE 4200
-#程序启动脚本
-CMD ["npm", "start"]
-```
-- 生成的镜像仓库：https://cloud.docker.com/repository/docker/wuyy1234/wyy_angular_demo
+- 部署
+    - 参考教程：https://www.cnblogs.com/li-peng/p/8144372.html
+    
