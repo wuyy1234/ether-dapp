@@ -262,4 +262,35 @@ ng serve --open
 
 - 部署
     - 参考教程：https://www.cnblogs.com/li-peng/p/8144372.html
+    - docker-compose.yml
+    ```
+    version: "3"
+    services:
+      web:
+        image: wuyy1234/wyy_angular_demo
+        deploy:
+          replicas: 5
+          resources:
+            limits: 
+              cpus: "0.1"
+              memory: 50M
+          restart_policy:
+            condition: on-failure
+        ports:
+          - "8111:4200"
+        networks: 
+          - gowebnet
+    networks: 
+      gowebnet:
+    ```
+    - 运行情况
+    ```
+    root@VM-28-58-ubuntu:/home/ubuntu/code/docker_wyy/myAngular# docker stack deploy -c docker-compose.yml myA                                 ngular
+    Creating network myAngular_gowebnet
+    Creating service myAngular_web
+    root@VM-28-58-ubuntu:/home/ubuntu/code/docker_wyy/myAngular# docker service ls
+    ID                  NAME                MODE                REPLICAS            IMAGE                                                               PORTS
+    oxayidnuid2m        myAngular_web       replicated          5/5                 wuyy1234/wyy_angular_demo:                                 latest   *:8111->4200/tcp
+    ```
+    
     
