@@ -1,0 +1,28 @@
+<br>
+<h2>welcome to merchant page</h2>
+
+
+<h3>create a merchant</h3>
+<form [formGroup]="createMerchantForm" (ngSubmit)="createMerchantSubmit()">
+  <label> shop name:
+    <input type="text" formControlName="createShopName" />
+  </label>
+  <label> owner name:
+    <input type="text" formControlName="createOwnerName"/>
+  </label>
+  <button   id="createMerchantButton" type="submit"  >
+    create
+  </button>
+</form>
+
+
+<h3>serach merchant detail by name</h3>
+<form [formGroup]="getMerchantDetailForm" (ngSubmit)="getMerchantDetailSubmit()">
+  <label>
+    <input type="text" formControlName="getMerchantDetail"/>
+  </label>
+  <button id="getMerchantDetailButton" type="submit">
+    search
+  </button>
+
+</form>

@@ -1,0 +1,38 @@
+<br>
+<h2>welcome to government department page</h2>
+
+<h3>search government department detail</h3>
+<form [formGroup]="searchDepartmentForm" (ngSubmit)="searchDepartmentSubmit()">
+  <label> id string of department:
+    <input type="text" formControlName="searchDeparmentID" />
+  </label>
+  <button   id="searchDeparmentButton" type="submit"  >
+    search
+  </button>
+</form>
+
+<h3>make transactions!</h3>
+<form [formGroup]="transactionForm" (ngSubmit)="transactionSubmit()">
+  <label> department name:
+    <input type="text" formControlName="transactionDepartmentName" />
+  </label>
+  <br>
+  <label> shopname       :       
+    <input type="text" formControlName="transactionShopname" />
+  </label>
+  <br>
+  <label> name           :           
+    <input type="text" formControlName="transactionName" />
+  </label>
+  <br>
+  <label> fee            :            
+    <input type="text" formControlName="transactionFee" />
+  </label>
+  <br> 
+  <label> headername     :     
+    <input type="text" formControlName="transactionHeadername" />
+  </label>
+  <button   id="transactionButton" type="submit"  >
+    transaction
+  </button>
+</form>

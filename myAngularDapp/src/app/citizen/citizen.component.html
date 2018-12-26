@@ -1,0 +1,22 @@
+<br>
+<h2>welcome to citzen page</h2>
+
+<h3>search government transaction</h3>
+<form [formGroup]="searchTransactionForm" (ngSubmit)="searchTransactionSubmit()">
+  <label> transaction number:
+    <input type="text" formControlName="searchTransactionNum"/>
+  </label>
+  <button id="searchTransactionButton" type="submit">
+    search
+  </button>
+</form>
+
+<h3>report government transaction</h3>
+<form [formGroup]="reportTransactionForm" (ngSubmit)="reportTransactionSubmit()">
+  <label> transaction number:
+    <input type="text" formControlName="reportTransactionNum"/>
+  </label>
+  <button id="reportTransactionButton" type="submit">
+      report
+  </button>
+</form>

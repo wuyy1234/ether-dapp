@@ -1,0 +1,32 @@
+
+<br>
+<h2>welcome to central government page</h2>
+
+
+<h3>create government deparments</h3>
+<form [formGroup]="creatDeparmentsForm" (ngSubmit)="createDeparmentsSubmit()">
+  <label> names of departments:
+    <input type="text" formControlName="createDeparmentsNames" />
+  </label>
+  <label> budgets of departments:
+    <input type="text" formControlName="createDeparmentsBudgets"/>
+  </label>
+  <button   id="createDepartmentsButton" type="submit"  >
+    create
+  </button>
+</form>
+
+
+<h3>nominate header of department</h3>
+<form [formGroup]="nominateDepartmentHeaderForm" (ngSubmit)="nominateDepartmentHeaderSubmit()">
+  <label> header name:
+    <input type="text" formControlName="headerName"/>
+  </label>
+  <label> department name:
+    <input type="text" formControlName="departmentName" />  
+  </label>
+  <button id="getMerchantDetailButton" type="submit">
+    nominate
+  </button>
+
+</form>
